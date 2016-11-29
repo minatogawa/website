@@ -37,6 +37,7 @@ h1,h2, h3, h4, h5, h6 {
 	line-height:1.1em;
 	color:#333;
 	margin-bottom: 20px;
+
 }
 
 /* ===================================
@@ -940,7 +941,7 @@ ul.team-detail li ul.social-network li i {
 .pricing-content{
 	background: #fff;
 	text-align:center;
-	font-size:14px;
+	font-size:23px;
 }
 
 .pricing-content strong{
@@ -1241,13 +1242,13 @@ ul.meta-post li a{
 }
 
 .media-content h6 {
-	font-size:14px;
+	font-size:23px;
 	font-weight:700;
 }
 
 .media-content span{
 	color:#a9a9a9;
-	font-size:14px;
+	font-size:23px;
 	font-weight:300;
 }
 
@@ -1576,6 +1577,9 @@ ul.social-network li {
 	float:right;
 }
 
+.footerTitle{
+	font-size: 23px;
+}
 
 /* ===============================
  Live preview purpose
@@ -1965,7 +1969,7 @@ article img.pull-right, article .align-right{
 	ul.portfolio li article a i{
 		width:20px;
 		height:20px;
-		font-size:14px;
+		font-size:23px;
 	}
 
 
