@@ -1,14 +1,9 @@
-<head>
-  <title>webSite</title>
-</head>
-
-<body>
+<template name="main">
   {{> header}}
-  {{> slider}}
-  {{> callaction}}
-  {{> content}}
+
+    {{> yield}}
   {{> footer}}
-</body>
+</template>
 
 <template name="header">
     <!-- start header -->
@@ -21,14 +16,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#"><style> img {height:75px; width:210px; margin-top: 10px}</style><img src="logo.jpg"/></a>
+                    <a  href="{{pathFor route='home'}}" ><img class="logoStyle" src="logo.jpg"/></a>
                     <!-- <a class="navbar-brand" href="index.html"><span>A</span>damas</a> -->
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="blog.html">Quem Somos</a></li>
-                        <li class="dropdown">
+                        <li class="active"><a href="{{pathFor route='home'}}">Home</a></li>
+                        <li><a href="{{pathFor route='about'}}">Quem Somos</a></li>
+                        <li><a href="{{pathFor route='services'}}">Serviços</a></li>
+                        <!-- <li class="dropdown">
                             <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Serviços <b class=" icon-angle-down"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="typography.html">Typography</a></li>
@@ -36,255 +32,15 @@
                                 <li><a href="components.html">Components</a></li>
                 <li><a href="pricingbox.html">Pricing box</a></li>
                             </ul>
-                        </li>
-                        <li><a href="portfolio.html">Clientes</a></li>
-                        
-                        <li><a href="blog.html">Publicações</a></li>
-                        <li><a href="contact.html">Contato</a></li>
+                        </li> -->
+                        <li><a href="{{pathFor route='clients'}}">Clientes</a></li>
+                        <li><a href="{{pathFor route='publications'}}">Publicações</a></li>
+                        <li><a href="{{pathFor route='contact'}}">Contato</a></li>
                     </ul>
                 </div>
             </div>
         </div>
   </header>
-</template>
-
-<template name="slider">
-<head>
-<meta charset="utf-8">
-<title>CSS3 & HTML Slider</title>
-<link href="sliderstyle.css" type="text/css" rel="stylesheet">
-</head>
- 
-<body>
-<!-- <h1>Pure CSS3 & HTML Slider</h1> -->
-   <div class="slider"> 
-        <input type="radio" id="control1" name="controls" checked="checked"/>
-        <label for="control1"></label>
-        <input type="radio" id="control2" name="controls"/>
-        <label for="control2"></label>
-        <input type="radio" id="control3" name="controls"/>
-        <label for="control3"></label>
-        <input type="radio" id="control4" name="controls"/>
-        <label for="control4"></label>
-        <input type="radio" id="control5" name="controls"/>
-        <label for="control5"></label>
-        <div class="sliderinner">
-            <ul>
-                <li>
-                    <img src="img/slides/i/6.jpg" />
-                    <div class="description">
- 
-                        <!-- <div class="description-text">
-                            <h2>Slideshow Title 1</h2>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                        </div> -->
-                    </div>
-                </li>
-                <li>
-                    <img src="img/slides/i/7.jpg" />
-                    <div class="description">
- 
-                        <!-- <div class="description-text">
-                            <h2>Slideshow Title 2</h2>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                        </div> -->
-                    </div>
-                </li>
-                <li>
-                    <img src="img/slides/i/3.jpg" />
-                    <div class="description">
- 
-                        <!-- <div class="description-text">
-                            <h2>Slideshow Title 3</h2>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                        </div> -->
-                    </div>
-                </li>
-                <li>
-                    <img src="img/slides/i/4.jpg" />
-                    <div class="description">
- 
-                        <!-- <div class="description-text">
-                            <h2>Slideshow Title 4</h2>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                        </div> -->
-                    </div>
-                </li>
-                <li>
-                    <img src="img/slides/i/2.jpg" />
-                    <div class="description">
- 
-                        <!-- <div class="description-text">
-                            <h2>Slideshow Title 5</h2>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-                        </div> -->
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div><!--slider-->
-</body>
-</template>
-
-<template name="callaction">
-  <section class="callaction">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="big-cta">
-          <div class="cta-text">
-            <h2><span>Adamas</span> Consultoria & Negócios</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </section>
-</template>
-
-<template name="content">
-  <section id="content">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="box">
-              <div class="box-gray aligncenter hvr-bounce-to-right">
-                <h4>Negócios e Inovação</h4>
-                <div class="icon">
-                <i class="fa fa-lightbulb-o fa-3x"></i>
-                </div>
-                <p>Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.</p>           
-              </div>
-              <div class="box-bottom">
-                <a href="#">Saiba Mais</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="box">
-              <div class="box-gray aligncenter hvr-bounce-to-right">
-                <h4>Operações e Serviços</h4>
-                <div class="icon">
-                <i class="fa fa-briefcase fa-3x"></i>
-                </div>
-                <p>
-                 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
-                </p>
-                  
-              </div>
-              <div class="box-bottom">
-                <a href="#">Saiba Mais</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="box">
-              <div class="box-gray aligncenter hvr-bounce-to-right">
-                <h4>Sistemas de Produção</h4>
-                <div class="icon">
-                <i class="fa fa-tasks fa-3x"></i>
-                </div>
-                <p>
-                 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
-                </p>
-                  
-              </div>
-              <div class="box-bottom">
-                <a href="#">Saiba Mais</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="box">
-              <div class="box-gray aligncenter hvr-bounce-to-right">
-                <h4>Gestão da Qualidade</h4>
-                <div class="icon">
-                <i class="fa fa-check fa-3x"></i>
-                </div>
-                <p>
-                 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
-                </p>
-                  
-              </div>
-              <div class="box-bottom">
-                <a href="#">Saiba Mais</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- divider -->
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="solidline">
-        </div>
-      </div>
-    </div>
-    <!-- end divider -->
-    <!-- Portfolio Projects -->
-    <div class="row">
-      <div class="col-lg-12">
-        <h4 class="heading">Principais Publicações da Empresa</h4>
-        <div class="row">
-          <section id="projects">
-          <ul id="thumbs" class="portfolio">
-            <!-- Item Project and Filter Name -->
-            <li class="col-lg-3 design" data-id="id-0" data-type="web">
-            <div class="item-thumbs">
-            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Plano de Negócios" href="img/works/1.jpg">
-            <span class="overlay-img"></span>
-            <span class="overlay-img-thumb font-icon-plus"></span>
-            </a>
-            <!-- Thumb Image and Description -->
-            <img src="img/works/y.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-            </div>
-            </li>
-            <!-- End Item Project -->
-            <!-- Item Project and Filter Name -->
-            <li class="item-thumbs col-lg-3 design" data-id="id-1" data-type="icon">
-            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Work 2" href="img/works/2.jpg">
-            <span class="overlay-img"></span>
-            <span class="overlay-img-thumb font-icon-plus"></span>
-            </a>
-            <!-- Thumb Image and Description -->
-            <img src="img/works/2.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-            </li>
-            <!-- End Item Project -->
-            <!-- Item Project and Filter Name -->
-            <li class="item-thumbs col-lg-3 photography" data-id="id-2" data-type="illustrator">
-            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Work 3" href="img/works/3.jpg">
-            <span class="overlay-img"></span>
-            <span class="overlay-img-thumb font-icon-plus"></span>
-            </a>
-            <!-- Thumb Image and Description -->
-            <img src="img/works/3.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-            </li>
-            <!-- End Item Project -->
-            <!-- Item Project and Filter Name -->
-            <li class="item-thumbs col-lg-3 photography" data-id="id-2" data-type="illustrator">
-            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Work 4" href="img/works/4.jpg">
-            <span class="overlay-img"></span>
-            <span class="overlay-img-thumb font-icon-plus"></span>
-            </a>
-            <!-- Thumb Image and Description -->
-            <img src="img/works/4.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-            </li>
-            <!-- End Item Project -->
-          </ul>
-          </section>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  </section>
 </template>
 
 <template name="footer">
@@ -296,10 +52,9 @@
           <h5 class="widgetheading footerTitle">Entre em contato</h5>
           <address>
           <strong>Adamas Consultoria & Negócios</strong><br>
-           Modernbuilding suite V124, AB 01<br>
-           Someplace 16425 Earth </address>
+           Av. Santa Isabel, 518 Barão Geraldo 13084-643 - Campinas - SP</address>
           <p>
-            <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891 <br>
+            <i class="icon-phone"></i> (19) 981512143 - (13) 997077876 <br>
             <i class="icon-envelope-alt"></i> email@domainname.com
           </p>
         </div>
@@ -307,7 +62,7 @@
       <div class="col-lg-3">
         <div class="widget">
           <h5 class="widgetheading footerTitle">Quem somos</h5>
-            <p>Conheça a Adamas Consultoria & Negócios, e entenda seus princípios, visão e missão</p>
+            <p><a href="{{pathFor route='about'}}">Conheça a Adamas Consultoria & Negócios, e entenda seus princípios, visão e missão</a></p>
           <!-- <ul class="link-list">
             <li><a href="#">Negócios & Inovação</a></li>
             <li><a href="#">Operações & Serviços</a></li>
@@ -320,10 +75,10 @@
         <div class="widget">
           <h5 class="widgetheading footerTitle">Serviços</h5>
           <ul class="link-list">
-            <li><a href="#">Negócios & Inovação</a></li>
-            <li><a href="#">Operações & Serviços</a></li>
-            <li><a href="#">Sistemas de Produção</a></li>
-            <li><a href="#">Gestão da Qualidade</a></li>
+            <li><a href="{{pathFor route='services'}}">Negócios & Inovação</a></li>
+            <li><a href="{{pathFor route='services'}}">Operações & Serviços</a></li>
+            <li><a href="{{pathFor route='services'}}">Sistemas de Produção</a></li>
+            <li><a href="{{pathFor route='services'}}">Gestão da Qualidade</a></li>
           </ul>
         </div>
       </div>

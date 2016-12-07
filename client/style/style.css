@@ -15,6 +15,8 @@
 1. General
 ==================================== */
 
+
+
 body {
 	font-family:'Open Sans', Arial, sans-serif;
 	font-size:14px;
@@ -100,9 +102,18 @@ img.img-polaroid {
 
 /* --- header -- */
 
+.logoStyle{
+	height:75px; 
+	width:210px; 
+	margin-top: 10px;
+}
 
 header .navbar {
     margin-bottom: 0;
+}
+
+.menuColor {
+	color:green;
 }
 
 .navbar-default {
@@ -441,7 +452,7 @@ section.callaction {
 ==================================== */
 
 #inner-headline{
-	background:#252525;
+	background:#440e0e;
 	position:relative;
 	margin:0;
 	padding:0;
