@@ -1,3 +1,8 @@
+<head>
+  <meta name="google-site-verification" content="C6u0oW9q9XUeFXO5BGakOB5rU3yRko7LQOSZBN2JHwg" />
+  <meta name="fragment" content="!">
+</head>
+
 <template name="main">
   {{> header}}
 
@@ -49,19 +54,23 @@
     <div class="row">
       <div class="col-lg-3">
         <div class="widget">
+        <a href="{{pathFor route='contact'}}">
           <h5 class="widgetheading footerTitle">Entre em contato</h5>
+        </a>
           <address>
           <strong>Adamas Consultoria & Negócios</strong><br>
            Av. Santa Isabel, 518 Barão Geraldo 13084-643 - Campinas - SP</address>
           <p>
             <i class="icon-phone"></i> (19) 981512143 - (13) 997077876 <br>
-            <i class="icon-envelope-alt"></i> email@domainname.com
+            <!-- <i class="icon-envelope-alt"></i> email@domainname.com -->
           </p>
         </div>
       </div>
       <div class="col-lg-3">
         <div class="widget">
+        <a href="{{pathFor route='about'}}">
           <h5 class="widgetheading footerTitle">Quem somos</h5>
+        </a>
             <p><a href="{{pathFor route='about'}}">Conheça a Adamas Consultoria & Negócios, e entenda seus princípios, visão e missão</a></p>
           <!-- <ul class="link-list">
             <li><a href="#">Negócios & Inovação</a></li>
@@ -73,7 +82,9 @@
       </div>
       <div class="col-lg-3">
         <div class="widget">
-          <h5 class="widgetheading footerTitle">Serviços</h5>
+          <a href="{{pathFor route='services'}}">
+            <h5 class="widgetheading footerTitle">Serviços</h5>
+          </a>
           <ul class="link-list">
             <li><a href="{{pathFor route='services'}}">Negócios & Inovação</a></li>
             <li><a href="{{pathFor route='services'}}">Operações & Serviços</a></li>
@@ -84,11 +95,13 @@
       </div>
       <div class="col-lg-3">
         <div class="widget">
+        <a href="{{pathFor route='publications'}}">
           <h5 class="widgetheading footerTitle">Principais Publicações</h5>
+        </a>
           <ul class="link-list">
             <li><a href="#"></a></li>
-            <li><a href="#">Plano de Negócios: Estratégia para Micro e Pequenas Empresas</a></li>
-            <li><a href="#">Handbook of Research on Business Social Networking: Organizational, Managerial, and Technological Dimensions</a></li>
+            <li><a href="{{pathFor route='planodenegocios'}}">Plano de Negócios: Estratégia para Micro e Pequenas Empresas</a></li>
+            <li><a href="{{pathFor route='mde2'}}">Método de Diagnóstico de Empresa</a></li>
           </ul>
         </div>
       </div>

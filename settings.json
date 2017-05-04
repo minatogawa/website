@@ -1,0 +1,20 @@
+{
+  	"galaxy.meteor.com": { 
+	    "env": { 
+	       "ROOT_URL": "http://www.adamas.meteorapp.com", 
+	       "MONGO_URL": "mongodb://adamas-website:9vk1aplp@ds123331.mlab.com:23331/adamas_mongodb" 
+	    } 
+	},
+  	
+  	"public": {
+	    "analyticsSettings": {
+	      "Google Analytics": {
+	        "trackingId": "UA-98282703-1"
+	      }
+	    }
+	}
+}
+
+
+
+  
